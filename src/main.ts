@@ -1,27 +1,27 @@
-import { createApp } from 'vue';
+import { setupGlobCom } from '@/plugins/setupGlobCom'
 
-import { setupGlobCom } from '@/plugins/setupGlobCom';
-import '@/plugins/assets.ts';
-import { setupRouter } from '@/router';
-import { setupStore } from '@/store';
+import { setupRouter } from '@/router'
+import { setupStore } from '@/store'
+import { createApp } from 'vue'
+import App from './App.vue'
 
-import App from './App.vue';
+import '@/plugins/assets.ts'
 
-const setupApp = async () => {
-    // 创建Vue应用实例
-    const app = createApp(App);
+async function setupApp() {
+  // 创建Vue应用实例
+  const app = createApp(App)
 
-    // 配置并初始化路由
-    await setupRouter(app);
+  // 配置并初始化路由
+  await setupRouter(app)
 
-    // 设置全局组件
-    setupGlobCom(app);
+  // 设置全局组件
+  setupGlobCom(app)
 
-    // 配置pinia状态管理
-    setupStore(app);
+  // 配置pinia状态管理
+  setupStore(app)
 
-    // 挂载Vue应用到DOM
-    app.mount('#app');
-};
+  // 挂载Vue应用到DOM
+  app.mount('#app')
+}
 
-setupApp();
+setupApp()

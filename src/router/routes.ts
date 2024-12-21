@@ -1,10 +1,10 @@
-import { RouteRecordRaw } from 'vue-router';
+import type { RouteRecordRaw } from 'vue-router'
 
-import { routes as modulesRoutes } from './utils';
+import { routes as modulesRoutes } from './utils'
 
 const routes: Array<RouteRecordRaw> = [
   {
-    //重定向
+    // 重定向
     path: '/',
     redirect: '/home',
   },
@@ -14,6 +14,6 @@ const routes: Array<RouteRecordRaw> = [
     path: '/:pathMatch(.*)*',
     component: () => import('@/components/Error/404.vue'),
   },
-];
+]
 
-export default routes;
+export default routes
