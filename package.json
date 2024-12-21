@@ -1,0 +1,58 @@
+{
+  "name": "vue3-mini-template",
+  "description": "一套基于vue3、ts、vite6的极简完整规范项目模板",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "packageManager": "pnpm@9.15.1",
+  "author": {
+    "name": "huangmingfu",
+    "email": "212149997@qq.com",
+    "url": "https://github.com/huangmingfu/vue3-ts-template"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/huangmingfu/vue3-ts-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huangmingfu/vue3-ts-template"
+  },
+  "bugs": "https://github.com/huangmingfu/vue3-ts-template/issues",
+  "keywords": [
+    "vue3-ts-template",
+    "vue3",
+    "template",
+    "vite6",
+    "typescript"
+  ],
+  "scripts": {
+    "dev": "vite -m dev",
+    "dev:test": "vite -m test",
+    "dev:pro": "vite -m pro",
+    "build:dev": "pnpm vite build -m dev",
+    "build:test": "pnpm vite build -m test",
+    "build:pro": "pnpm vite build -m pro",
+    "preview:dev": "pnpm vite preview -m dev",
+    "preview:test": "pnpm vite preview -m test",
+    "preview:pro": "pnpm vite preview -m pro",
+    "ts:check": "vue-tsc --noEmit --skipLibCheck",
+    "preinstall": "npx only-allow pnpm",
+    "clean": "rm -rf node_modules dist dist-*",
+    "deps:check": "pnpm outdated -r",
+    "deps:update": "pnpm update --latest"
+  },
+  "dependencies": {
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0",
+    "pinia": "^2.3.0",
+    "pinia-plugin-persistedstate": "^4.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitejs/plugin-vue-jsx": "^4.1.1",
+    "@vue/tsconfig": "^0.7.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.0.5",
+    "vue-tsc": "^2.1.10",
+    "@types/node": "^22.10.2"
+  }
+}
