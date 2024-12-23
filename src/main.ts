@@ -1,10 +1,8 @@
 import { setupGlobCom } from '@/plugins/setupGlobCom'
-
 import { setupRouter } from '@/router'
 import { setupStore } from '@/store'
 import { createApp } from 'vue'
 import App from './App.vue'
-
 import '@/plugins/assets.ts'
 
 async function setupApp() {

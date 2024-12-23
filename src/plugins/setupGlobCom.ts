@@ -1,8 +1,8 @@
 import type { App } from 'vue'
 
-// import { Icon } from '@/components'
+import { Loading } from '@/components'
 
 /* 挂载全局组件 */
-export function setupGlobCom(_app: App<Element>): void {
-  // app.component('Icon', Icon)
+export function setupGlobCom(app: App<Element>): void {
+  app.component('Loading', Loading)
 }
