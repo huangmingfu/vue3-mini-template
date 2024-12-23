@@ -1,10 +1,10 @@
 import type { App } from 'vue'
 import { createRouter, createWebHistory, type RouteLocationNormalized } from 'vue-router'
 
-import routes from './routes'
+import { routes, startProgress, stopProgress } from './utils'
 
 // 定义路由白名单，这些路径可以直接访问而无需登录验证
-const whiteList = ['/login', '/404', '/403']
+const whiteList = ['/home', '/login', '/404', '/403']
 
 // 创建路由实例
 const router = createRouter({
@@ -17,8 +17,12 @@ const router = createRouter({
 })
 
 // 全局路由守卫
-router.beforeEach(async (to: RouteLocationNormalized, _from: RouteLocationNormalized, next) => {
+router.beforeEach(async (to: RouteLocationNormalized, from: RouteLocationNormalized, next) => {
   try {
+    if (to.path !== from.path) {
+      startProgress()
+    }
+
     // 设置页面标题，优先使用路由元信息中的标题，否则使用环境变量中的默认标题
     document.title = (to.meta.title as string) || import.meta.env.VITE_APP_TITLE
 
@@ -52,8 +56,12 @@ router.beforeEach(async (to: RouteLocationNormalized, _from: RouteLocationNormal
   }
 })
 
-export function setupRouter(app: App<Element>) {
+router.afterEach(() => {
+  stopProgress()
+})
+
+function setupRouter(app: App<Element>) {
   app.use(router)
 }
 
-export default router
+export { router, setupRouter }

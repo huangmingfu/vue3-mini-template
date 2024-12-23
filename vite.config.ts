@@ -61,7 +61,9 @@ export default defineConfig(({ mode }) => {
             'vendor-utils': [
               'dayjs',
               'pinia',
+              'pinia-plugin-persistedstate',
               '@vueuse/core',
+              'nprogress',
             ],
             // 'vendor-ui':['ant-design-vue']
           },

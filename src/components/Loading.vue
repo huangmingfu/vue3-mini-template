@@ -7,7 +7,7 @@
 </template>
 
 <style scoped lang="scss">
-     .loader {
+.loader {
   display: block;
   position: fixed;
   z-index: 1031;
