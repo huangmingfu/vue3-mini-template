@@ -48,27 +48,16 @@ pnpm build:pro    # 生产环境
 
 ## 环境配置
 
--
+```bash
+.env 基础配置
 
-.env
+.env.development 开发环境配置
 
-- 基础配置
--
+.env.test 测试环境配置
 
-.env.development
-
-- 开发环境配置
--
-
-.env.test
-
-- 测试环境配置
--
-
-.env.production
-
-- 生产环境配置
+.env.production 生产环境配置
+```
 
 ## License
 
-MIT
+[MIT](./LICENSE)
