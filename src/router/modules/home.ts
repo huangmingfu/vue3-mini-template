@@ -8,7 +8,7 @@ export default [
       title: '首页',
       keepAlive: true, // 是否缓存路由
     },
-    component: () => import('@/pages/Home/Home.vue'),
+    component: () => import('@/views/Home/Home.vue'),
   },
   {
     path: '/login',
@@ -16,6 +16,6 @@ export default [
     meta: {
       title: '登录',
     },
-    component: () => import('@/pages/Login/Login.vue'),
+    component: () => import('@/views/Login/Login.vue'),
   },
 ] as RouteRecordRaw[]

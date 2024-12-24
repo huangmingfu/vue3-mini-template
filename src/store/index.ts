@@ -8,3 +8,5 @@ export function setupStore(app: App) {
   pinia.use(piniaPluginPersistedstate)
   app.use(pinia)
 }
+
+export * from './modules/userStore'
