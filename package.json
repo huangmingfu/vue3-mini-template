@@ -37,6 +37,7 @@
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "lint:inspector": "npx @eslint/config-inspector",
     "clean": "rm -rf node_modules dist dist-*",
     "deps:check": "pnpm outdated -r",
     "deps:update": "pnpm update --latest",
