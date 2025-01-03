@@ -1,15 +1,30 @@
-import antfu from '@antfu/eslint-config'
+import antfu from '@antfu/eslint-config';
 
 export default antfu({
+  // 禁用 jsonc 和 yaml 支持
+  toml: false,
+  yaml: false,
   // TypeScript 和 Vue 是自动检测的，你也可以显式启用它们
-  typescript: true, // ts 支持
-  vue: true, // vue 支持
-  unocss: true, // unocss 支持
-  stylistic: true, // 样式格式化
-  formatters: true, // eslint-plugin-format 格式化
+  typescript: true,
+  vue: true,
+  // unocss 支持
+  unocss: true,
+  // 风格配置
+  stylistic: {
+    indent: 2,
+    semi: true, // 分号
+    quotes: 'single',
+  },
+  // eslint-plugin-format 格式化
+  formatters: true,
+  rules: {
+    // vue组件标签的顺序
+    'vue/block-order': ['error', {
+      order: ['template', 'script', 'style'],
+    }],
+  },
   // 忽略某些文件或目录
   // ignores: [
   //   '**/fixtures',
-  //   // ...globs
   // ],
-})
+});

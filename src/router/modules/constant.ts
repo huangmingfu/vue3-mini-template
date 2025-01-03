@@ -1,4 +1,4 @@
-import type { RouteRecordRaw } from 'vue-router'
+import type { RouteRecordRaw } from 'vue-router';
 
 export default [
   {
@@ -17,4 +17,4 @@ export default [
     },
     component: () => import('@/components/Error/403.vue'),
   },
-] as RouteRecordRaw[]
+] as RouteRecordRaw[];

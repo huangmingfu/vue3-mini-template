@@ -7,7 +7,7 @@ import {
   presetWebFonts,
   transformerDirectives,
   transformerVariantGroup,
-} from 'unocss'
+} from 'unocss';
 
 export default defineConfig({
   // 快捷类名定义
@@ -41,4 +41,4 @@ export default defineConfig({
   ],
   // 安全列表 - 这些类名将始终生成
   safelist: 'prose prose-sm m-auto text-left'.split(' '),
-})
+});

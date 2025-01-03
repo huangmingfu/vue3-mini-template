@@ -1,5 +1,5 @@
-import type { RouteRecordRaw } from 'vue-router'
-import { getRoutesFromModules } from './tools'
+import type { RouteRecordRaw } from 'vue-router';
+import { getRoutesFromModules } from './tools';
 
 /** 路由列表 */
 export const routes: Array<RouteRecordRaw> = [
@@ -14,4 +14,4 @@ export const routes: Array<RouteRecordRaw> = [
     path: '/:pathMatch(.*)*',
     redirect: '/404',
   },
-]
+];

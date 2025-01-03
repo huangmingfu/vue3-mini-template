@@ -1,21 +1,21 @@
-import { useAxios, type UseAxiosOptions } from '@vueuse/integrations'
+import { useAxios, type UseAxiosOptions } from '@vueuse/integrations';
 
-import instance from './service'
+import instance from './service';
 
 export function GET(url: string, options?: UseAxiosOptions) {
-  return useAxios(url, { method: 'GET' }, instance, options)
+  return useAxios(url, { method: 'GET' }, instance, options);
 }
 
 export function POST(url: string, options?: UseAxiosOptions) {
-  return useAxios(url, { method: 'POST' }, instance, options)
+  return useAxios(url, { method: 'POST' }, instance, options);
 }
 
 export function PUT(url: string, options?: UseAxiosOptions) {
-  return useAxios(url, { method: 'PUT' }, instance, options)
+  return useAxios(url, { method: 'PUT' }, instance, options);
 }
 
 export function DELETE(url: string, options?: UseAxiosOptions) {
-  return useAxios(url, { method: 'DELETE' }, instance, options)
+  return useAxios(url, { method: 'DELETE' }, instance, options);
 }
 
 /** 使用示例：api/ */

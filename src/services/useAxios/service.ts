@@ -3,13 +3,13 @@ import type {
   AxiosInstance,
   AxiosResponse,
   InternalAxiosRequestConfig,
-} from 'axios'
-import axios from 'axios'
+} from 'axios';
+import axios from 'axios';
 
 const axiosInstance: AxiosInstance = axios.create({
   timeout: 30000,
   baseURL: import.meta.env.VITE_API_BASE_PATH,
-})
+});
 
 // 请求拦截器
 axiosInstance.interceptors.request.use(
@@ -19,21 +19,21 @@ axiosInstance.interceptors.request.use(
     // if (token) {
     //     config.headers.Authorization = `Bearer ${token}`
     // }
-    return res
+    return res;
   },
   (err: AxiosError) => {
-    return Promise.reject(err)
+    return Promise.reject(err);
   },
-)
+);
 
 // 响应拦截器即异常处理
 axiosInstance.interceptors.response.use(
   (res: AxiosResponse) => {
-    return res.data
+    return res.data;
   },
   (err: AxiosError) => {
-    return Promise.resolve(err)
+    return Promise.resolve(err);
   },
-)
+);
 
-export default axiosInstance
+export default axiosInstance;

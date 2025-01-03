@@ -9,15 +9,6 @@ pnpm i @vueuse/integrations
 ## 官方使用示例
 
 ```vue
-<script setup lang="ts">
-import { useAxios } from '@vueuse/integrations/useAxios'
-
-const { data, isLoading, isFinished, execute, abort, isAborted } = useAxios(
-  'https://jsonplaceholder.typicode.com/todos/1',
-)
-console.log(data.value)
-</script>
-
 <template>
   <button @click="execute()">
     Execute
@@ -29,4 +20,13 @@ console.log(data.value)
   <note>Finished: {{ isFinished.toString() }}</note>
   <note>Aborted: {{ isAborted.toString() }}</note>
 </template>
+
+<script setup lang="ts">
+import { useAxios } from '@vueuse/integrations/useAxios';
+
+const { data, isLoading, isFinished, execute, abort, isAborted } = useAxios(
+  'https://jsonplaceholder.typicode.com/todos/1',
+);
+console.log(data.value);
+</script>
 ```

@@ -1,4 +1,4 @@
-import type { RouteRecordRaw } from 'vue-router'
+import type { RouteRecordRaw } from 'vue-router';
 
 export default [
   {
@@ -18,4 +18,4 @@ export default [
     },
     component: () => import('@/views/Login/Login.vue'),
   },
-] as RouteRecordRaw[]
+] as RouteRecordRaw[];

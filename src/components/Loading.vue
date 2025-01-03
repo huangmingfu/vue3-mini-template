@@ -1,10 +1,10 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
   <div class="loader" />
 </template>
+
+<script setup lang="ts">
+
+</script>
 
 <style scoped lang="scss">
 .loader {
