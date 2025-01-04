@@ -18,7 +18,7 @@ export default antfu({
   // eslint-plugin-format 格式化
   formatters: true,
   rules: {
-    // vue组件标签的顺序
+    // vue组件标签的顺序，默认是 script, template, style
     'vue/block-order': ['error', {
       order: ['template', 'script', 'style'],
     }],
