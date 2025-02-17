@@ -1,4 +1,5 @@
-import { useAxios, type UseAxiosOptions } from '@vueuse/integrations';
+import type { UseAxiosOptions } from '@vueuse/integrations';
+import { useAxios } from '@vueuse/integrations';
 
 import instance from './service';
 

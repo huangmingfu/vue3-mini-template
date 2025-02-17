@@ -1,5 +1,6 @@
 import type { App } from 'vue';
-import { createRouter, createWebHistory, type RouteLocationNormalized } from 'vue-router';
+import type { RouteLocationNormalized } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 
 import { routes, startProgress, stopProgress } from './utils';
 
