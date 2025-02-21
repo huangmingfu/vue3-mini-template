@@ -61,8 +61,9 @@ router.afterEach(() => {
   stopProgress();
 });
 
-function setupRouter(app: App<Element>) {
+async function setupRouter(app: App<Element>) {
   app.use(router);
+  await router.isReady();
 }
 
 export { router, setupRouter };
