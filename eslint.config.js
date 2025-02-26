@@ -22,6 +22,7 @@ export default antfu({
     'vue/block-order': ['error', {
       order: ['template', 'script', 'style'],
     }],
+    // 'no-console': 'off',
   },
   // 忽略某些文件或目录
   // ignores: [
