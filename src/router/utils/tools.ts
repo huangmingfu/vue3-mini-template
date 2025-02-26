@@ -1,7 +1,5 @@
 import type { RouteRecordRaw } from 'vue-router';
 
-export * from '@/plugins/nprogress';
-
 /**
  * 基于 router/modules 文件导出的内容动态生成路由
  */
