@@ -36,16 +36,6 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
-    // 打包配置
-    esbuild:
-      env.VITE_NODE_ENV === 'development'
-        ? undefined
-        : {
-          /** 打包时移除 console.log */
-            pure: ['console.log'],
-            /** 打包时移除 debugger */
-            drop: ['debugger'],
-          },
     build: {
       target: 'esnext',
       outDir: env.VITE_OUT_DIR || 'dist',
