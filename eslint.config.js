@@ -23,6 +23,18 @@ export default antfu({
       order: ['template', 'script', 'style'],
     }],
     // 'no-console': 'off',
+    'unused-imports/no-unused-vars': [
+      'error',
+      {
+        args: 'all',
+        argsIgnorePattern: '^_',
+        caughtErrors: 'all',
+        caughtErrorsIgnorePattern: '^_',
+        destructuredArrayIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        ignoreRestSiblings: true,
+      },
+    ],
   },
   // 忽略某些文件或目录
   // ignores: [
