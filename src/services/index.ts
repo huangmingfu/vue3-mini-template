@@ -15,7 +15,7 @@ function request(option: AxiosRequestConfig) {
     responseType,
     headers: {
       'Content-Type': CONTENT_TYPE,
-      'Authorization': token ?? '',
+      Authorization: token ?? '',
       ...headers,
     },
   });

@@ -1,12 +1,12 @@
 # Vue3 Mini Template
 
-一个基于 Vue3、TypeScript、Vite6 的轻量级前端项目模板。
+一个基于 Vue3、TypeScript、Vite8 的轻量级前端项目模板。
 
 ## 技术栈
 
 - 🎯 Vue 3
 - 🔧 TypeScript
-- ⚡️ Vite 6
+- ⚡️ Vite 8
 - 🎨 UnoCSS
 - 🏬 Pinia
 - 🛠️ VueRouter

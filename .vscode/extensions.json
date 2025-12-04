@@ -3,8 +3,7 @@
     "Vue.volar",
     "editorconfig.editorconfig",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
-    "stylelint.vscode-stylelint",
-    "mikestead.dotenv"
+    "mikestead.dotenv",
+    "oxc.oxc-vscode"
   ]
 }

@@ -1,0 +1,7 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  // Use 80 if migrating from Prettier; 100 is the Oxfmt default!
+  "printWidth": 120,
+  "singleQuote": true,
+  "ignorePatterns": [] // Same as `.prettierignore`
+}

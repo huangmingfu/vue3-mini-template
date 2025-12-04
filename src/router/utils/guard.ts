@@ -12,14 +12,12 @@ export function registerRouterGuard(router: Router) {
     // 如果没有登录
     if (!token) {
       // 如果在免登录的白名单中，则直接进入
-      if (isWhiteList(to))
-        return true;
+      if (isWhiteList(to)) return true;
       // 其他没有访问权限的页面将被重定向到登录页面
       return LOGIN_PATH;
     }
     // 如果已经登录，并准备进入 Login 页面，则重定向到主页
-    if (to.path === LOGIN_PATH)
-      return '/';
+    if (to.path === LOGIN_PATH) return '/';
     // 判断有无该页面权限
     // if (to.meta.roles ? userStore.roles.some(role => to.meta.roles!.includes(role)) : true)  return true;
     // 无权限则进入 403 页面

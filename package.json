@@ -1,10 +1,10 @@
 {
   "name": "vue3-mini-template",
   "type": "module",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
-  "packageManager": "pnpm@9.15.1",
-  "description": "一个基于 Vue3、TypeScript、Vite6 的轻量级前端项目模板。",
+  "packageManager": "pnpm@10.24.0",
+  "description": "一个基于 Vue3、TypeScript、Vite8 的轻量级前端项目模板。",
   "author": {
     "name": "huangmingfu",
     "email": "212149997@qq.com",
@@ -21,12 +21,12 @@
     "vue3-ts-template",
     "vue3",
     "template",
-    "vite6",
+    "vite8",
     "typescript"
   ],
   "engines": {
-    "node": ">=20",
-    "pnpm": ">=9"
+    "node": ">=22",
+    "pnpm": ">=10"
   },
   "scripts": {
     "dev": "vite -m development",
@@ -39,8 +39,8 @@
     "preview:test": "pnpm vite preview -m test",
     "preview:pro": "pnpm vite preview -m production",
     "typecheck": "vue-tsc --noEmit",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "oxlint --fix",
+    "format": "oxfmt",
     "lint:inspector": "npx @eslint/config-inspector",
     "clean": "rm -rf node_modules dist dist-*",
     "deps:check": "pnpm outdated -r",
@@ -50,37 +50,41 @@
     "postinstall": "npx simple-git-hooks"
   },
   "dependencies": {
-    "@vueuse/core": "^13.5.0",
-    "axios": "^1.11.0",
-    "dayjs": "^1.11.13",
+    "@vueuse/core": "^14.1.0",
+    "axios": "^1.13.2",
+    "dayjs": "^1.11.19",
     "nprogress": "^0.2.0",
-    "pinia": "^3.0.3",
-    "pinia-plugin-persistedstate": "^4.4.1",
-    "vue": "^3.5.18",
-    "vue-router": "^4.5.1"
+    "pinia": "^3.0.4",
+    "pinia-plugin-persistedstate": "^4.7.1",
+    "vue": "^3.5.25",
+    "vue-router": "^4.6.3"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^5.0.0",
-    "@types/node": "^24.1.0",
+    "@types/node": "^24.10.1",
     "@types/nprogress": "^0.2.3",
-    "@unocss/eslint-config": "66.3.3",
-    "@vitejs/plugin-vue": "^6.0.0",
-    "@vitejs/plugin-vue-jsx": "^5.0.1",
-    "@vue/tsconfig": "^0.7.0",
-    "eslint": "^9.32.0",
-    "eslint-plugin-format": "^1.0.1",
-    "lint-staged": "^16.1.2",
-    "sass": "^1.89.2",
-    "simple-git-hooks": "^2.13.0",
-    "typescript": "~5.8.3",
-    "unocss": "66.3.3",
-    "vite": "^7.0.6",
-    "vue-tsc": "^3.0.4"
+    "@vitejs/plugin-vue": "^6.0.2",
+    "@vitejs/plugin-vue-jsx": "^5.1.2",
+    "@vue/tsconfig": "^0.8.1",
+    "lint-staged": "^16.2.7",
+    "oxfmt": "^0.16.0",
+    "oxlint": "^1.31.0",
+    "sass": "^1.94.2",
+    "simple-git-hooks": "^2.13.1",
+    "typescript": "^5.9.3",
+    "unocss": "66.5.10",
+    "vite": "8.0.0-beta.0",
+    "vite-plugin-oxlint": "^1.5.0",
+    "vue-tsc": "^3.1.5"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite": "8.0.0-beta.0"
+    }
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*": "eslint --fix"
+    "*": "oxlint"
   }
 }

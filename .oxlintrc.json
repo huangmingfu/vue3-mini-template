@@ -1,0 +1,15 @@
+{
+  "excludeFiles": ["dist/*", "node_modules/*"],
+  "categories": {
+    "correctness": "error", // 正确性问题，默认为 "error"
+    "suspicious": "warn", // 可疑代码，默认为 "off"
+    "style": "off", // 代码风格，默认为 "off"
+    "pedantic": "off", // 吹毛求疵的规则，默认为 "off"
+    "perf": "warn" // 性能相关，默认为 "off"
+  },
+  "rules": {
+    "no-console": "warn",
+    "no-debugger": "error",
+    "eqeqeq": ["error", "always"]
+  }
+}

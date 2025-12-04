@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import Unocss from 'unocss/vite';
 import { defineConfig, loadEnv } from 'vite';
+import oxlintPlugin from 'vite-plugin-oxlint'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd());
@@ -14,7 +15,7 @@ export default defineConfig(({ mode }) => {
         '@': path.resolve(import.meta.dirname, 'src'),
       },
     },
-    plugins: [vue(), vueJsx(), Unocss()],
+    plugins: [vue(), vueJsx(), Unocss(),oxlintPlugin()],
     css: {
       preprocessorOptions: {
         scss: {
@@ -47,13 +48,7 @@ export default defineConfig(({ mode }) => {
           assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
           manualChunks: {
             'vendor-vue': ['vue', 'vue-router'],
-            'vendor-utils': [
-              'dayjs',
-              'pinia',
-              'pinia-plugin-persistedstate',
-              '@vueuse/core',
-              'nprogress',
-            ],
+            'vendor-utils': ['dayjs', 'pinia', 'pinia-plugin-persistedstate', '@vueuse/core', 'nprogress'],
             // 'vendor-ui':['ant-design-vue']
           },
         },
