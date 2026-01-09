@@ -6,4 +6,8 @@
 
 <script setup lang="ts"></script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.btn {
+  color: $color-test;
+}
+</style>

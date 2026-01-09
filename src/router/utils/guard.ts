@@ -15,7 +15,7 @@ export function registerRouterGuard(router: Router) {
       if (isWhiteList(to))
         return true;
       // 其他没有访问权限的页面将被重定向到登录页面
-      return LOGIN_PATH;
+      return `${LOGIN_PATH}?redirect=${to.fullPath}`;
     }
     // 如果已经登录，并准备进入 Login 页面，则重定向到主页
     if (to.path === LOGIN_PATH)
